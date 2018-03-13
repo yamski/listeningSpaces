@@ -3,10 +3,11 @@
 //  discogs
 //
 //  Created by John Yam on 2/13/18.
-//  Copyright © 2018 Blue Sombrero. All rights reserved.
 //
 
 import UIKit
+import OAuthSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let hostURL = URL(string: "/", relativeTo: url)?.absoluteURL {
+            if hostURL == URL(string: "listeningspaces:///") {
+                OAuthSwift.handle(url: url)
+            }
+        }
         return true
     }
 
