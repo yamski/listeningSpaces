@@ -21,6 +21,10 @@ struct User: Codable {
 
 extension User {
     static let authenticatedUser = {
-        return Resource<User>(url:"https://api.discogs.com/oauth/identity")
+        return Resource<User>(url:"oauth/identity")
     }()
+    
+    func save() {
+        UserDefaults.saveUserDetails(userName: self.username, resourceUrl: self.resourceUrl, userId: self.id)
+    }
 }

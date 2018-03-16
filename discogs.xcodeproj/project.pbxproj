@@ -11,11 +11,14 @@
 		D060D5BB20406F8C00B907BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D060D5BA20406F8C00B907BA /* User.swift */; };
 		D060D5C320448FE200B907BA /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D060D5C220448FE200B907BA /* Resource.swift */; };
 		D09AFFF3203CAA8400F76285 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09AFFF2203CAA8400F76285 /* HomeViewController.swift */; };
+		D0A19C4B205959CB00941EBC /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A19C4A205959CB00941EBC /* Keychain.swift */; };
+		D0A19C532059741000941EBC /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A19C522059741000941EBC /* UserDefaultsExtension.swift */; };
 		D0E1C57120333CA100FDE3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1C57020333CA100FDE3BC /* AppDelegate.swift */; };
 		D0E1C57620333CA100FDE3BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E1C57420333CA100FDE3BC /* Main.storyboard */; };
 		D0E1C57820333CA100FDE3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E1C57720333CA100FDE3BC /* Assets.xcassets */; };
 		D0E1C57B20333CA100FDE3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E1C57920333CA100FDE3BC /* LaunchScreen.storyboard */; };
 		D0E1C58320333CC100FDE3BC /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1C58220333CC100FDE3BC /* ServiceClient.swift */; };
+		D0EC64E6205C202300AE0138 /* DiscogsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC64E5205C202300AE0138 /* DiscogsClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,8 @@
 		D060D5BA20406F8C00B907BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D060D5C220448FE200B907BA /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		D09AFFF2203CAA8400F76285 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D0A19C4A205959CB00941EBC /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		D0A19C522059741000941EBC /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		D0E1C56D20333CA100FDE3BC /* discogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = discogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E1C57020333CA100FDE3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0E1C57520333CA100FDE3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		D0E1C57A20333CA100FDE3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0E1C57C20333CA100FDE3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E1C58220333CC100FDE3BC /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
+		D0EC64E5205C202300AE0138 /* DiscogsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscogsClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D0A19C4C20596CFC00941EBC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D09AFFF2203CAA8400F76285 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D0A19C4D20596D0900941EBC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D0A19C4A205959CB00941EBC /* Keychain.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D0A19C4E20596D3700941EBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D060D5BA20406F8C00B907BA /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D0A19C4F2059716C00941EBC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1C57920333CA100FDE3BC /* LaunchScreen.storyboard */,
+				D0E1C57420333CA100FDE3BC /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D0A19C502059719700941EBC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D060D5C220448FE200B907BA /* Resource.swift */,
+				D0E1C58220333CC100FDE3BC /* ServiceClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D0A19C51205973F200941EBC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0A19C522059741000941EBC /* UserDefaultsExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D0E1C56420333CA000FDE3BC = {
 			isa = PBXGroup;
 			children = (
@@ -84,17 +140,26 @@
 		D0E1C56F20333CA100FDE3BC /* discogs */ = {
 			isa = PBXGroup;
 			children = (
+				D0A19C4C20596CFC00941EBC /* ViewControllers */,
+				D0A19C4F2059716C00941EBC /* Storyboards */,
+				D0EC64E4205C1F1800AE0138 /* DiscogsAPI */,
+				D0A19C502059719700941EBC /* Networking */,
+				D0A19C4E20596D3700941EBC /* Models */,
+				D0A19C51205973F200941EBC /* Extensions */,
+				D0A19C4D20596D0900941EBC /* Helpers */,
 				D0E1C57020333CA100FDE3BC /* AppDelegate.swift */,
-				D0E1C57420333CA100FDE3BC /* Main.storyboard */,
 				D0E1C57720333CA100FDE3BC /* Assets.xcassets */,
-				D0E1C57920333CA100FDE3BC /* LaunchScreen.storyboard */,
 				D0E1C57C20333CA100FDE3BC /* Info.plist */,
-				D0E1C58220333CC100FDE3BC /* ServiceClient.swift */,
-				D09AFFF2203CAA8400F76285 /* HomeViewController.swift */,
-				D060D5BA20406F8C00B907BA /* User.swift */,
-				D060D5C220448FE200B907BA /* Resource.swift */,
 			);
 			path = discogs;
+			sourceTree = "<group>";
+		};
+		D0EC64E4205C1F1800AE0138 /* DiscogsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D0EC64E5205C202300AE0138 /* DiscogsClient.swift */,
+			);
+			path = DiscogsAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,10 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D060D5BB20406F8C00B907BA /* User.swift in Sources */,
+				D0EC64E6205C202300AE0138 /* DiscogsClient.swift in Sources */,
 				D0E1C58320333CC100FDE3BC /* ServiceClient.swift in Sources */,
 				D0E1C57120333CA100FDE3BC /* AppDelegate.swift in Sources */,
 				D060D5C320448FE200B907BA /* Resource.swift in Sources */,
 				D09AFFF3203CAA8400F76285 /* HomeViewController.swift in Sources */,
+				D0A19C532059741000941EBC /* UserDefaultsExtension.swift in Sources */,
+				D0A19C4B205959CB00941EBC /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
